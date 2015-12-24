@@ -1,0 +1,21 @@
+{% extends "header.html" %}
+
+{% block body %}
+    <form method="POST" action="/">
+        <table>
+            <tr>
+                <td>{{ form.name.label }}</td>
+                <td>{{ form.name(size=20) }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.protocol.label }}</td>
+                <td>{{ form.protocol }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.model.label }}</td>
+                <td>{{ form.model }}</td>
+            </tr>
+        </table>
+        <input type="submit" value="Go">
+    </form>
+{% endblock %}

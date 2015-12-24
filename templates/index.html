@@ -1,0 +1,11 @@
+{% extends "header.html" %}
+
+{% block body %}
+<div>
+	<ul id="menu_list">
+		{% for choice in MENU_CHOICES %}
+			<li class="menu_listitem"><a href="{{ choice[1] }}" >{{ choice[0] }}</li>
+		{% endfor %}
+	</ul>
+</div>
+{% endblock %}

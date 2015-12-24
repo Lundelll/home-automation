@@ -1,0 +1,9 @@
+{% extends "header.html" %}
+
+{% block body %}
+	<div class="device">
+		<p> {{ device.name }} </p> <br />
+		<a class="device-btn" href="/device/{{ device.id }}/on/">On</a>
+		<a class="device-btn" href="/device/{{ device.id }}/off/">Off</a>
+	</div>
+{% endblock %}

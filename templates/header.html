@@ -1,0 +1,18 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+	<title>Control System</title>
+</head>
+<body>
+	<div id="main-wrapper">
+		<div id="menu">
+			<a id="back-btn" href="/">Back</a>
+			<span id="menu-txt">Menu</span>
+		</div>
+		<div id="body-wrapper">
+		{% block body %}
+		{% endblock %}
+		</div>
+	</div>
+</body>
+</html>

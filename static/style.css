@@ -1,0 +1,58 @@
+body {
+	background-color: #B5EDFF;
+	margin: 0px;
+	font-family: arial;
+}
+
+#main-wrapper {
+	width: 100%;
+	margin: 0px;
+
+}
+
+#body-wrapper {
+	margin-left: 9%;
+	margin-right: 9%;
+}
+
+.device {
+	width: 100%;
+	float: left;
+	font-size: 30px;
+	vertical-align: center;
+	text-align: center;
+}
+
+.device-btn {
+	background-color: #5CD3FA;
+	width: 45%;
+	border: 1px solid black;
+	padding: 5px;
+	margin-left: 1%;
+	text-align: center;
+	font-size: 40px;
+	float: left;
+}
+
+#menu {
+	width: 100%;
+	border-bottom: 1px solid black;
+	overflow: auto;
+}
+
+#back-btn {
+	display: inline-block;
+	width: 28%;
+	border-right: 1px solid black;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	font-size: 50px;
+	text-align: center;
+}
+
+#menu-txt {
+	display: inline-block;
+	width: 50%;
+	font-size: 50px;
+	text-align: center;
+}

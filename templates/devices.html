@@ -1,0 +1,12 @@
+{% extends "header.html" %}
+
+{% block body %}
+	<ul>
+	{% for device in devices %}
+		<li>
+		{{ device.id }} 
+		{{ device.name }}
+		</li>
+	{% endfor %}
+	</ul>
+{% endblock %}
