@@ -36,6 +36,7 @@ def device(id):
 
 @app.route('/device/add/', methods=['GET', 'POST'])
 def add_device():
+    form = DeviceForm(csrf_enabled=False)
     if request.method == 'GET':
         '''
         core = td.TelldusCore()
@@ -47,11 +48,13 @@ def add_device():
 
         return "Replace this method to show the form."
         '''
-        form = DeviceForm(csrf_enabled=False)
         return render_template('add.html', form=form)
 
     if request.method == 'POST':
-        return "This should handle the form imput."
+        core = td.TelldusCore()
+        lamp = core.add_device(form.name.data, form.protocol.data, form.model.data)
+        print(lamp)
+        return redirect('/')
 
 
 @app.route('/device/<id>/remove/')

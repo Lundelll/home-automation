@@ -1,7 +1,7 @@
 {% extends "header.html" %}
 
 {% block body %}
-    <form method="POST" action="/">
+    <form method="POST" action="" name="addDevice">
         <table>
             <tr>
                 <td>{{ form.name.label }}</td>
@@ -16,6 +16,6 @@
                 <td>{{ form.model }}</td>
             </tr>
         </table>
-        <input type="submit" value="Go">
+        <input type="submit" value="Add">
     </form>
 {% endblock %}
