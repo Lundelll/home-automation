@@ -2,7 +2,7 @@
 
 {% block body %}
 	<form method="POST" action="" name="removeDevice">
-        {{ form.device_choices }}
+        {{ form.device_choices(class_='list-group') }}
         <input type="submit" value="Remove">
     </form>
 {% endblock %}

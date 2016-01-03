@@ -1,16 +1,19 @@
 <html>
 <head>
-	<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+	<!-- <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/> -->
+	<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Control System</title>
 </head>
 <body>
-	<div id="main-wrapper">
-		<div id="menu">
-			<a id="back-btn" href="/">Back</a>
-			<span id="menu-txt">Menu</span>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-3"><a id="back-btn" href="/"><h2>Start</h2></a></div>
+			<div class="col-xs-8"><span id="menu-txt"><h2>Home Control</h2></span></div>
 		</div>
-		<div id="body-wrapper">
+		<div>
 		{% block body %}
 		{% endblock %}
 		</div>

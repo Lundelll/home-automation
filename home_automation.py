@@ -24,7 +24,6 @@ def devices():
 
     for device in cm.devices():
         if device.type == const.TELLSTICK_TYPE_DEVICE:
-            print(device.id)
             devices_menu.append(
                 [device.name, "/device/" + str(device.id) + "/"])
 
@@ -55,18 +54,13 @@ def add_device():
 def remove_device():
     form = RemoveDeviceForm(csrf_enabled=False)
     if request.method == 'GET':
-        devices = []
-        for device in cm.devices():
-            devices.append(device)
         return render_template('remove.html', form=form)
 
     if request.method == 'POST':
-        print(form.device_choices.data)
         if form.device_choices.data is not None or len(form.device_choices.data) > 0:
             for device_id in form.device_choices.data:
                 device = td.DeviceFactory(int(device_id))
                 device.remove()
-                print("Device with id: " + device_id + " was removed.")
 
         return redirect('/')
 
@@ -89,6 +83,14 @@ def turn_off_device(id):
         return redirect(url_for('device', id=id))
     except td.TelldusError:
         return "Fail, are you sure the a divice with that ID exists?"
+
+
+@app.route('/turnoffeverything/')
+def turn_off_everything():
+    for device in cm.devices():
+        device.turn_off()
+
+    return redirect('/')
 
 
 @app.route('/groups/')

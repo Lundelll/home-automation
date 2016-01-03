@@ -2,20 +2,18 @@
 
 {% block body %}
     <form method="POST" action="" name="addDevice">
-        <table>
-            <tr>
-                <td>{{ form.name.label }}</td>
-                <td>{{ form.name(size=20) }}</td>
-            </tr>
-            <tr>
-                <td>{{ form.protocol.label }}</td>
-                <td>{{ form.protocol }}</td>
-            </tr>
-            <tr>
-                <td>{{ form.model.label }}</td>
-                <td>{{ form.model }}</td>
-            </tr>
-        </table>
-        <input type="submit" value="Add">
+        <div class="form-group">
+            {{ form.name.label }}
+            {{ form.name(size=20, class_="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.protocol.label }}
+            {{ form.protocol(class_="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.model.label }}
+            {{ form.model(class_="form-control") }}
+        </div>
+        <input class="btn btn-default" type="submit" value="Add">
     </form>
 {% endblock %}

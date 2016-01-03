@@ -2,9 +2,9 @@
 
 {% block body %}
 <div>
-	<ul id="menu_list">
+	<ul class="nav nav-pills nav-stacked">
 		{% for choice in MENU_CHOICES %}
-			<li class="menu_listitem"><a href="{{ choice[1] }}" >{{ choice[0] }}</li>
+			<li role="presentation"><a href="{{ choice[1] }}" >{{ choice[0] }}</a></li>
 		{% endfor %}
 	</ul>
 </div>

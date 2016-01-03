@@ -9,7 +9,7 @@ def menu():
                     ["Visa alla grupper", "/groups/"],
                     ["Lägg till ny enhet", "/device/add/"],
                     ["Ta bort en enhet", "/device/remove/"],
-                    ["Tänd alla lamporna", "/"]]
+                    ["Släck alla lamporna", "/turnoffeverything/"]]
 
     return MENU_CHOICES
 
