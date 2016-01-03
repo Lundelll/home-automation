@@ -46,7 +46,8 @@ def add_device():
         core = td.TelldusCore()
         lamp = core.add_device(form.name.data,
                                form.protocol.data, form.model.data)
-        print(lamp)
+        print("Added device: " + lamp.id + " - " + lamp.name)
+        print("Form entry name: " + form.name.data + "\nprotocol: " + form.protocol.data + "\nmodel: " + form.model.data)
         return redirect('/')
 
 
@@ -60,6 +61,7 @@ def remove_device():
         if form.device_choices.data is not None or len(form.device_choices.data) > 0:
             for device_id in form.device_choices.data:
                 device = td.DeviceFactory(int(device_id))
+                print("Removed device: " + device.id + " - " + device.name)
                 device.remove()
 
         return redirect('/')
