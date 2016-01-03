@@ -1,11 +1,9 @@
 {% extends "header.html" %}
 
 {% block body %}
-<div>
-	<ul class="nav nav-pills nav-stacked">
-		{% for choice in MENU_CHOICES %}
-			<li role="presentation"><a href="{{ choice[1] }}" >{{ choice[0] }}</a></li>
-		{% endfor %}
-	</ul>
-</div>
+<ul class="nav nav-pills nav-stacked">
+	{% for choice in MENU_CHOICES %}
+		<li role="presentation"><a href="{{ choice[1] }}" >{{ choice[0] }}</a></li>
+	{% endfor %}
+</ul>
 {% endblock %}

@@ -1,9 +1,7 @@
 {% extends "header.html" %}
 
 {% block body %}
-	<div class="well well-lg">
-		<p class="lead"> {{ device.name }} </p> <br />
-		<a class="btn btn-primary btn-lg" href="/device/{{ device.id }}/on/">On</a>
-		<a class="btn btn-primary btn-lg" href="/device/{{ device.id }}/off/">Off</a>
-	</div>
+	<p class="lead"> {{ device.name }} </p> <br />
+	<a class="btn btn-primary btn-lg" href="/device/{{ device.id }}/on/">On</a>
+	<a class="btn btn-primary btn-lg" href="/device/{{ device.id }}/off/">Off</a>
 {% endblock %}
