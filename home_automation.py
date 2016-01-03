@@ -74,7 +74,7 @@ def turn_on_device(id):
         device.turn_on()
         return redirect(url_for('device', id=id))
     except td.TelldusError:
-        return "Fail, are you sure the a divice with that ID exists?"
+        return "Fail, are you sure the a device with that ID exists?"
 
 
 @app.route('/device/<id>/off/')
@@ -84,7 +84,7 @@ def turn_off_device(id):
         device.turn_off()
         return redirect(url_for('device', id=id))
     except td.TelldusError:
-        return "Fail, are you sure the a divice with that ID exists?"
+        return "Fail, are you sure the a device with that ID exists?"
 
 
 @app.route('/turnoffeverything/')

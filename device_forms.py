@@ -14,8 +14,11 @@ class CreateDeviceForm(Form):
 
 class RemoveDeviceForm(Form):
     dev = []
-    for device in devices():
-        dev.append((device.id, device.name))
+    if len(devices()) > 0 and devices() is not None:
+        for device in devices():
+            dev.append((device.id, device.name))
+    else:
+        dev = None
 
     widgets.ListWidget()
     device_choices = SelectMultipleField('Devices', choices=dev,
