@@ -24,6 +24,7 @@ def devices():
 
     for device in cm.devices():
         if device.type == const.TELLSTICK_TYPE_DEVICE:
+            print(device.id)
             devices_menu.append(
                 [device.name, "/device/" + str(device.id) + "/"])
 
@@ -60,10 +61,12 @@ def remove_device():
         return render_template('remove.html', form=form)
 
     if request.method == 'POST':
-        if request.args is not None or request.args > 0:
-            for arg in request.args:
-                device = td.DeviceFactory(int(arg))
+        print(form.device_choices.data)
+        if form.device_choices.data is not None or len(form.device_choices.data) > 0:
+            for device_id in form.device_choices.data:
+                device = td.DeviceFactory(int(device_id))
                 device.remove()
+                print("Device with id: " + device_id + " was removed.")
 
         return redirect('/')
 
