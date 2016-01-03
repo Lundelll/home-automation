@@ -34,9 +34,9 @@ def protocols():
 def models():
     MODEL_CHOICES = [("", ""),
                      ("codeswitch", "codeswitch (arctech)"),
-                     ("selflearning-switch (arctech)",
+                     ("selflearning-switch",
                       "selflearning-switch (arctech)"),
-                     ("selflearning-dimmer (arctech)",
+                     ("selflearning-dimmer",
                       "selflearning-dimmer (arctech)"),
                      ("bell", "bell (arctech)"),
                      ("selflearning", "selflearning (risingsun)"),

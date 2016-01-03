@@ -14,7 +14,7 @@ class CreateDeviceForm(Form):
 
 class RemoveDeviceForm(Form):
     dev = []
-    if len(devices()) > 0 and devices() is not None:
+    if len(devices()) > 0:
         for device in devices():
             dev.append((device.id, device.name))
 
