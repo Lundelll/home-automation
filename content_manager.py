@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import tellcore.telldus as td
 import tellcore.constants as const
+import string
 
 
 def menu():
@@ -44,6 +45,23 @@ def models():
                      ("kp100", "kp100 (silvanachip)")]
 
     return MODEL_CHOICES
+
+
+def houses():
+    arr = []
+    letters = list(string.ascii_uppercase[:16])
+    for letter in letters:
+        arr.append((letter, letter))
+
+    return arr
+
+
+def numbers():
+    arr = []
+    for number in range(1, 17):
+        arr.append((str(number), str(number)))
+
+    return arr
 
 
 def devices():

@@ -14,6 +14,14 @@
             {{ form.model.label }}
             {{ form.model(class_="form-control") }}
         </div>
+        <div class="form-group">
+            {{ form.house.label }}
+            {{ form.house(class_="form-control")}}
+        </div>
+        <div class="form-group">
+            {{ form.number.label }}
+            {{ form.number(class_="form-control")}}
+        </div>
         <input class="btn btn-default" type="submit" value="Add">
     </form>
 {% endblock %}
