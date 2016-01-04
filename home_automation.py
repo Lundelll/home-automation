@@ -64,10 +64,10 @@ def remove_device():
 
     if request.method == 'POST':
         if form.device_choices.data is not None or len(form.device_choices.data) > 0:
+            print("Removed:")
+            print(form.device_choices.data)
             for device_id in form.device_choices.data:
                 device = td.DeviceFactory(int(device_id))
-                print(
-                    "Removed device: " + str(device.id) + " - " + device.name)
                 device.remove()
 
         return redirect('/')
